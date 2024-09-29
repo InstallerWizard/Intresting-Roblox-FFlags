@@ -1,6 +1,6 @@
 > [!NOTE]
-> #### To modify these flags on your Roblox client, you can install [Bloxstrap](https://github.com/pizzaboxer/bloxstrap), and install it. Then open Bloxstrap Menu.
-> #### To modify these flags on your Roblox Studio client [Roblox Studio Mod Manager](https://github.com/MaximumADHD/Roblox-Studio-Mod-Manager). After installation, install Roblox studio and use Edit Flags to create overrides.
+> #### To modify these flags on your Roblox client, you can install [Bloxstrap](https://github.com/pizzaboxer/bloxstrap). [Install here](https://github.com/pizzaboxer/bloxstrap/releases/latest), and install it. Then open Bloxstrap Menu.
+> #### To modify these flags on your Roblox Studio client [Roblox Studio Mod Manager](https://github.com/MaximumADHD/Roblox-Studio-Mod-Manager). [Exe](https://github.com/MaximumADHD/Roblox-Studio-Mod-Manager/raw/main/RobloxStudioModManager.exe)/[Zip](https://github.com/MaximumADHD/Roblox-Studio-Mod-Manager/archive/main.zip) After installation, install Roblox studio and use Edit Flags to create overrides.
 > ### Modifying your client without a third-party program (Modifications will not be saved across updates):
 > 1. Find your Roblox Installation directory. Typically found at %localappdata%\Roblox\Versions\ for Windows.
 > 2. Identify the folder starting with the name "version" containing RobloxPlayerBeta.exe for Roblox, or RobloxStudioBeta.exe for Roblox studio.
