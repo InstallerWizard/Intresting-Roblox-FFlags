@@ -1,3 +1,18 @@
+> [!NOTE]
+> #### To modify these flags on your Roblox client, you can install [Bloxstrap](https://github.com/pizzaboxer/bloxstrap), and install it. Then open Bloxstrap Menu.
+> #### To modify these flags on your Roblox Studio client [Roblox Studio Mod Manager](https://github.com/MaximumADHD/Roblox-Studio-Mod-Manager). After installation, install Roblox studio and use Edit Flags to create overrides.
+> ### Modifying your client without a third-party program (Modifications will not be saved across updates):
+> 1. Find your Roblox Installation directory. Typically found at %localappdata%\Roblox\Versions\ for Windows.
+> 2. Identify the folder starting with the name "version" containing RobloxPlayerBeta.exe for Roblox, or RobloxStudioBeta.exe for Roblox studio.
+> 3. Create a folder inside the version folder and name it to "ClientSettings".
+> 4. Add a txt file and rename it to "ClientAppSettings.json" and write {}, Example of a flag modification:
+> ```
+> {
+>   DFIntConnectionMTUSize: 900,
+>   FIntDebugForceMSAASamples: 4,
+>   UserRaycastPeformanceImprovements: "true",
+> }
+
 # Performance user flags
 
 ## Client-sided
