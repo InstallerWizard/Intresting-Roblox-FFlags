@@ -1,61 +1,77 @@
-# Intresting-Roblox-FFlags
-Roblox FFlags and User flags of my picking
-
 # Performance user flags
+
+## Client-sided
 - `UserRaycastPeformanceImprovements`
-  - Uses ```workspace:Raycast()``` instead of ```worldmodel:FindPartOnRayWithIgnoreList()```
+   - Uses ```workspace:Raycast()``` instead of ```worldmodel:FindPartOnRayWithIgnoreList()```
  - `UserUpdateInputConnections`
-  - Disconnects unrequired connections, better memory usage
+   - Disconnects unrequired connections, better memory usage
+## Micro-optimizations
+**Networking**
+- `DFIntConnectionMTUSize <number> <range(900, 2500+)>`
+  - Recommended: `900`
+- `DFIntOptimizePingThreshold: <number> <range(50ms, 200ms+)>`
+  - Recommended: 50ms
+- `FFlagEnableQuickGameLaunch <boolean>`
+  - May improve load times, slightly **buggy.**
+
+# Rendering engine
+- `FIntDebugForceMSAASamples <number> <range(0x, 4x)>`
+  - Any value over 4x will break viewport-frames.
+
+- `FIntRenderLocalLightUpdatesMax <number>`
+- `FIntRenderLocalLightUpdatesMin <number>`
+   - A range limit to light-updates, lower values in games with Future lighting may improve peformance but cause artifacting.
+}
 
 # Optional features
-- `UserCameraToggle`
+- `UserCameraToggle <boolean>`
 
 # Recommended, probably Default
-- `UserCameraInputDt`
+- `UserCameraInputDt <boolean>`
   - Makes camera movement relative to real-time instead of to framerate.
 
 # General
- - `UserHideCharacterParticlesInFirstPerson`
+ - `UserHideCharacterParticlesInFirstPerson <boolean>`
    - Hides particles in first person
 # Sounds
- - `UserSoundsUseRelativeVelocity2`
+ - `UserSoundsUseRelativeVelocity2 <boolean>`, `UserSoundsUseRelativeVelocity <boolean>`
    - Sounds act as if they are in Unity when they are in a part that is moving. (High pitch when moving, normal pitch when normal velocity)
 # Gamepad
- - `UserFixGamepadMaxZoom`
+ - `UserFixGamepadMaxZoom <boolean>`
    - Stops zoom controller if zoom has reached the maximum zoom, reseting it back to the minimum.
- - `UserFixGamepadSensitivity`
+ - `UserFixGamepadSensitivity <boolean>`
    - Makes gamepad camera control affected by [sensitivity](<https://create.roblox.com/docs/reference/engine/classes/UserGameSettings#GamepadCameraSensitivity>).
 # Virutal Reality
-  - `UserVRVehicleCamera2`
+  - `UserVRVehicleCamera2 <boolean>`
     - Makes the VR camera in Third person move with the vehicle the character is in.
 # Unremarkable
 ## Touch screens
-  - `UserClearPanOnCameraDisable`
+  - `UserClearPanOnCameraDisable <boolean>`
     - Clears the touch-screen's panning
-  - `UserResetTouchStateOnMenuOpen`
+  - `UserResetTouchStateOnMenuOpen <boolean>`
     - Resets all touch data when opening the Roblox ESC menu.
-  - `UserDynamicThumbstickSafeAreaUpdate`
+  - `UserDynamicThumbstickSafeAreaUpdate <boolean>`
     - Changes safe-area for where the thumbstick is.
-  - `UserClampClassicThumbstick`
+  - `UserClampClassicThumbstick <boolean>`
     - Uses a older version of the thumbstick controls.
-  - `UserFixTouchJumpBug2`
+  - `UserFixTouchJumpBug2 <boolean>`
     - Briefly de-activate the jump controller when the input for it is reconnected.
-  - `UserDynamicThumbstickMoveOverButtons`
+  - `UserDynamicThumbstickMoveOverButtons <boolean>`
     - Uses ```UserInputService.TouchMoved``` over ```ContextActionService``` when using the thumbstick.
 ## Click to move
-   - `UserExcludeNonCollidableForPathfinding`
+   - `UserExcludeNonCollidableForPathfinding <boolean>`
      - Changes Width and Height for Pathfinding parameters based on Character extents.
-   - `UserClickToMoveSupportAgentCanClimb2`
+   - `UserClickToMoveSupportAgentCanClimb2 <boolean>`
      - Enable character to climb Trusses using Click to move.
 ## Builtin freecam
-   - `UserExitFreecamBreaksWithShiftlock`
+   - `UserExitFreecamBreaksWithShiftlock <boolean>`
      - Exiting the freecam while Shift lock is enabled causes a bug to happen, when this flag is enabled, the bug is solved.
-   - `UserShowGuiHideToggles`
+   - `UserShowGuiHideToggles <boolean>`
      - Hides UI during freecam
 ## Animate script
-   - `UserNoUpdateOnLoop`
+   - `UserNoUpdateOnLoop <boolean>`
      - Animations that are not looped with be automatically looped by setting the time-position to 0 when the animation ends.
-   - `UserAnimateScaleRun`
+   - `UserAnimateScaleRun <boolean>`
       - Taller characters have a slower walking animation.
 ## Bug fixes
-- `UserFixCameraOffsetJitter2`
+- `UserFixCameraOffsetJitter2 <boolean>`
